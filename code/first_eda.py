@@ -32,7 +32,7 @@ def filter_matches_america(matches_df: pd.DataFrame):
     return america_matches_df
 
 def get_america_matches_id(america_matches_id: pd.DataFrame):
-    return list(america_matches_df[['match_id']])
+    return list(america_matches_df['match_id'])
 
 if __name__=="__main__":
     matches_pathway = "../data/matches.parquet"
@@ -44,6 +44,6 @@ if __name__=="__main__":
                               'away_team']].head(5))
     
     america_matches_id=get_america_matches_id(america_matches_df)
-    print(type(america_matches_id))
+    print(america_matches_id[:])
     
 
